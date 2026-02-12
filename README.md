@@ -11,6 +11,7 @@ Real-time Pizza Visuals: A UI that follows a pizza order from placed → prepari
 ## Demo
 <img width="1919" height="966" alt="image" src="https://github.com/user-attachments/assets/5a97f522-79b8-4763-a24b-9ead7f7d5d3b" />
 [Live Demo](https://promise-pizzahub-visual.vercel.app/)
+
 < br />
 ## Engineering Decisions
 Why Async Orchestration?: In a real app, things happen at different times. I used orchestration to ensure the UI doesn't "jump" ahead of the actual data, making the experience feel smooth and logical.
