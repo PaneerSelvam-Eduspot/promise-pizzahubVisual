@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise - PizzaHub</title>
+    <link rel="stylesheet" href="styles/ph.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+</head>
+<body>
+    <div class="container">
+        <div class="title"> 
+         <img src="./assets/pizzaBoy.png" alt="pizzaSlice">      
+         <h1>Pizza<span style="color:rgb(224, 114, 74);">Hub</span></h1>
+        </div>
+
+        <div class="layout">
+          <div class="left grid-item">
+            <div class="menu">
+               <h1>Menu</h1>
+               <div id="shop-info" class="shop-info">Loading shop...</div>
+               <div class="pizza-list" id="pizza-list">
+                 <p>Loading pizzas...</p>
+               </div>
+            </div>
+            <div class="order-info">
+                <p id="selected-pizza">Select a pizza</p>
+                <p id="selected-beverage">Beverage: -</p>
+                <label>Quantity: <input type="number" id="quantity" value="1" min="1" max="10"></label>
+            </div>
+            <div class="btns">
+              <button id="orderBtn" disabled>Order Pizza</button>
+              <button id="cancelBtn">Cancel</button>
+              <button class="refresh">⟳</button>
+            </div>
+          </div>
+          
+          <div class="center grid-item">
+            <div class="stages-list">
+                <h1>Stages</h1>
+                <div class="stage-item" data-stage="placed">
+                    <span class="emojis">📋</span>
+                    <div class="stage-content">
+                        <span class="stage-name">Order Placed</span>
+                        <div class="stage-data" id="data-placed"></div>
+                    </div>
+                    <div class="stage-connector"></div> 
+                </div>
+                <div class="stage-item" data-stage="preparing">
+                    <span class="emojis">🔍</span>
+                    <div class="stage-content">
+                        <span class="stage-name">Preparing</span>
+                        <div class="stage-data" id="data-preparing"></div>
+                    </div>
+                    <div class="stage-connector"></div> 
+                </div>
+                <div class="stage-item" data-stage="baking">
+                    <span class="emojis">🔥</span>
+                    <div class="stage-content">
+                        <span class="stage-name">Baking</span>
+                        <div class="stage-data" id="data-baking"></div>
+                    </div>
+                    <div class="stage-connector"></div>
+                </div>
+                <div class="stage-item" data-stage="delivery">
+                    <span class="emojis">🛵</span>
+                    <div class="stage-content">
+                        <span class="stage-name">Out for Delivery</span>
+                        <div class="stage-data" id="data-delivery"></div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+          <div class="right grid-item">
+            <div class="state-console">
+                <h1>Promise Console</h1>
+                <div class="console-output" id="console-output">
+                    <div class="console-line">
+                        WAITING FOR ORDER!
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+   <script type="module" src="./src/components/ph-ui.js"></script>
+   <script src="./src/components/bg.js"></script>
+</body>
+</html>
